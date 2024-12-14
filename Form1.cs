@@ -1,13 +1,14 @@
 ﻿using problem8.Properties;
 using System;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace problem8
 {
     public partial class Form1 : Form
     {
-        int counter = 9;
+        
         public Form1()
         {
             InitializeComponent();
@@ -16,8 +17,8 @@ namespace problem8
         public void Handle()
         {
             handle_top_left();
-            /*
             handle_top_center();
+            /*
             handle_top_right();
 
             handle_middle_left();
@@ -249,21 +250,8 @@ namespace problem8
             e.Graphics.DrawLine(whitePen, 1050, 600, 1250, 600);
         }
 
-        public void top_left_image(string symbol,PaintEventArgs e)
-        {
-            if (symbol == "X")
-            {
-                Image img = Resources.Big_X;
-                e.Graphics.DrawImage(img, 600, 145, 200, 145);
-            }
-            else
-            {
-                Image img = Resources.Big_O;
-                e.Graphics.DrawImage(img, 600, 145, 200, 145);
-            }
-        }
-        
-        
+
+
         public void top_center_image(PaintEventArgs e)
         {
             Image img = Resources.Big_O;
@@ -325,11 +313,13 @@ namespace problem8
             bottom_left_grid(sender, e);
             bottom_center_grid(sender, e);
             bottom_right_grid(sender, e);
-            
 
 
             // draw main grid
             mainGrid(sender, e);
+
+            
+
         }
 
         public string checkX_threeInRow(Button b1, Button b2, Button b3, Button b4, Button b5, Button b6, Button b7, Button b8, Button b9)
@@ -397,17 +387,96 @@ namespace problem8
 
 
         }
-        public void handle_top_left(PaintEventArgs e)
+        public void handle_top_left()
         {
             if (checkX_threeInRow(button1,button2,button3,button4,button5,button6,button7,button8,button9) == "X")
             {
-                top_left_image("X",e);
+                button1.Hide(); button2.Hide(); button3.Hide();
+                button4.Hide(); button5.Hide(); button6.Hide();
+                button7.Hide(); button8.Hide(); button9.Hide();
+
+                // picture box
+                PictureBox pb = new PictureBox();
+                pb.Image = Resources.Big_X;
+                pb.Location = new Point(600, 145);
+                pb.Size = new Size(200, 145);
+                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb.Show();
+                this.Controls.Add(pb);
             }
 
             if (checkO_threeInRow(button1, button2, button3, button4, button5, button6, button7, button8, button9) == "O")
             {
-                top_left_image("O", e);
+                button1.Hide(); button2.Hide(); button3.Hide();
+                button4.Hide(); button5.Hide(); button6.Hide();
+                button7.Hide(); button8.Hide(); button9.Hide();
+
+                // picture box
+                PictureBox pb = new PictureBox();
+                pb.Image = Resources.Big_O;
+                pb.Location = new Point(600, 145);
+                pb.Size = new Size(200, 145);
+                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb.Show();
+                this.Controls.Add(pb);
+
             }
+        }
+
+        public void handle_top_center()
+        {
+
+            if (checkX_threeInRow(button1, button2, button3, button4, button5, button6, button7, button8, button9) == "X")
+            {
+                button1.Hide(); button2.Hide(); button3.Hide();
+                button4.Hide(); button5.Hide(); button6.Hide();
+                button7.Hide(); button8.Hide(); button9.Hide();
+
+                // picture box
+                PictureBox pb = new PictureBox();
+                pb.Image = Resources.Big_X;
+                pb.Location = new Point(600, 145);
+                pb.Size = new Size(200, 145);
+                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb.Show();
+                this.Controls.Add(pb);
+            }
+
+            if (checkO_threeInRow(button18, button17, button16, button13, button14, button15, button10, button11, button12) == "O")
+            {
+                button18.Hide(); button17.Hide(); button16.Hide();
+                button13.Hide(); button14.Hide(); button15.Hide();
+                button10.Hide(); button11.Hide(); button12.Hide();
+                
+
+                // picture box
+                PictureBox pb = new PictureBox();
+                pb.Image = Resources.Big_O;
+                pb.Location = new Point(825, 145);
+                pb.Size = new Size(200, 145);
+                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb.Show();
+                this.Controls.Add(pb);
+
+
+
+
+
+
+                //PictureBox pb = new PictureBox();
+                //pb.Image = Resources.Big_O;
+                //pb.Location = new Point(600, 145);
+                //pb.Size = new Size(200, 145);
+                //pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                //pb.Show();
+                //this.Controls.Add(pb);
+
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
