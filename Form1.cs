@@ -12,6 +12,23 @@ namespace problem8
         {
             InitializeComponent();
         }
+        
+        public void Handle()
+        {
+            handle_top_left();
+            /*
+            handle_top_center();
+            handle_top_right();
+
+            handle_middle_left();
+            handle_middle_center();
+            handle_middle_right();
+
+            handle_bottom_left();
+            handle_bottom_center();
+            handle_bottom_right();
+            */
+        }
         public void ImageChange(Button btn)
         {
             if (btn.Tag.ToString() == "?")
@@ -22,6 +39,7 @@ namespace problem8
                     img = new Bitmap(img,new Size(btn.Width-10,btn.Height-10) );
                     btn.Image = img;
                     btn.Tag = "X";
+                    Handle();
                     label1.Text = "Player O";
                     label1.Tag = "O";
                     
@@ -33,6 +51,7 @@ namespace problem8
                     img = new Bitmap(img, new Size(btn.Width - 10, btn.Height - 10));
                     btn.Image = img;
                     btn.Tag = "O";
+                    Handle();
                     label1.Text = "Player X";
                     label1.Tag = "X";
                     
@@ -68,7 +87,7 @@ namespace problem8
         }
         public void top_left_grid(object sender, PaintEventArgs e)
         {
-            Color white = Color.FromArgb(255, 255, 255, 255);
+            Color white = Color.FromArgb(100, 255, 255, 255);
             Pen whitePen = new Pen(white);
             whitePen.Width = 5;
             //whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -230,53 +249,63 @@ namespace problem8
             e.Graphics.DrawLine(whitePen, 1050, 600, 1250, 600);
         }
 
-        public void top_left_image(object sender, PaintEventArgs e)
+        public void top_left_image(string symbol,PaintEventArgs e)
         {
-            Image img = Resources.Big_X;
-            e.Graphics.DrawImage(img, 600, 145, 200, 145);
+            if (symbol == "X")
+            {
+                Image img = Resources.Big_X;
+                e.Graphics.DrawImage(img, 600, 145, 200, 145);
+            }
+            else
+            {
+                Image img = Resources.Big_O;
+                e.Graphics.DrawImage(img, 600, 145, 200, 145);
+            }
         }
-        public void top_center_image(object sender, PaintEventArgs e)
+        
+        
+        public void top_center_image(PaintEventArgs e)
         {
             Image img = Resources.Big_O;
             e.Graphics.DrawImage(img, 825, 145, 200, 145);
         }
-        public void top_right_image(object sender, PaintEventArgs e)
+        public void top_right_image(PaintEventArgs e)
         {
             Image img = Resources.Big_X;
             e.Graphics.DrawImage(img, 1050, 145, 200, 145);
         }
 
-        public void middle_left_image(object sender, PaintEventArgs e)
+        public void middle_left_image(PaintEventArgs e)
         {
             Image img = Resources.Big_O;
             e.Graphics.DrawImage(img, 600, 315, 200, 145);
         }
 
-        public void middle_center_image(object sender, PaintEventArgs e)
+        public void middle_center_image(PaintEventArgs e)
         {
             Image img = Resources.Big_X;
             e.Graphics.DrawImage(img, 825, 315, 200, 145);
         }
 
-        public void middle_right_image(object sender, PaintEventArgs e)
+        public void middle_right_image(PaintEventArgs e)
         {
             Image img = Resources.Big_O;
             e.Graphics.DrawImage(img, 1050, 315, 200, 145);
         }
 
-        public void bottom_left_image(object sender, PaintEventArgs e)
+        public void bottom_left_image(PaintEventArgs e)
         {
             Image img = Resources.Big_X;
             e.Graphics.DrawImage(img, 600, 485, 200, 145);
         }
 
-        public void bottom_center_image(object sender, PaintEventArgs e)
+        public void bottom_center_image(PaintEventArgs e)
         {
             Image img = Resources.Big_O;
             e.Graphics.DrawImage(img, 825, 485, 200, 145);
         }
 
-        public void bottom_right_image(object sender, PaintEventArgs e)
+        public void bottom_right_image(PaintEventArgs e)
         {
             Image img = Resources.Big_X;
             e.Graphics.DrawImage(img, 1050, 485, 200, 145);
@@ -303,10 +332,82 @@ namespace problem8
             mainGrid(sender, e);
         }
 
-
-        public void handle_top_left()
+        public string checkX_threeInRow(Button b1, Button b2, Button b3, Button b4, Button b5, Button b6, Button b7, Button b8, Button b9)
         {
 
+            // check horizontals
+            if (b1.Tag.ToString() == "X" && b2.Tag.ToString() == "X" && b3.Tag.ToString() == "X" ||
+                b4.Tag.ToString() == "X" && b5.Tag.ToString() == "X" && b6.Tag.ToString() == "X" ||
+                b7.Tag.ToString() == "X" && b8.Tag.ToString() == "X" && b9.Tag.ToString() == "X")
+            {
+
+                return "X";
+            }
+
+            // check verticals
+            if (b1.Tag.ToString() == "X" && b4.Tag.ToString() == "X" && b7.Tag.ToString() == "X" ||
+                b2.Tag.ToString() == "X" && b5.Tag.ToString() == "X" && b8.Tag.ToString() == "X" ||
+                b3.Tag.ToString() == "X" && b6.Tag.ToString() == "X" && b9.Tag.ToString() == "X")
+            {
+
+                return "X";
+            }
+
+            // check diagonals
+            if (b1.Tag.ToString() == "X" && b5.Tag.ToString() == "X" && b9.Tag.ToString() == "X" ||
+                b3.Tag.ToString() == "X" && b5.Tag.ToString() == "X" && b7.Tag.ToString() == "X")
+            {
+                return "X";
+            }
+
+            return string.Empty;
+
+
+
+        }
+
+        public string checkO_threeInRow(Button b1,Button b2,Button b3,Button b4,Button b5,Button b6,Button b7,Button b8,Button b9)
+        {
+            // check horizontals
+            if (b1.Tag.ToString() == "O" && b2.Tag.ToString() == "O" && b3.Tag.ToString() == "O" ||
+                b4.Tag.ToString() == "O" && b5.Tag.ToString() == "O" && b6.Tag.ToString() == "O" ||
+                b7.Tag.ToString() == "O" && b8.Tag.ToString() == "O" && b9.Tag.ToString() == "O")
+            {
+
+                return "O";
+            }
+
+            // check verticals
+            if (b1.Tag.ToString() == "O" && b4.Tag.ToString() == "O" && b7.Tag.ToString() == "O" ||
+                b2.Tag.ToString() == "O" && b5.Tag.ToString() == "O" && b8.Tag.ToString() == "O" ||
+                b3.Tag.ToString() == "O" && b6.Tag.ToString() == "O" && b9.Tag.ToString() == "O")
+            {
+
+                return "O";
+            }
+
+            // check diagonals
+            if (b1.Tag.ToString() == "O" && b5.Tag.ToString() == "O" && b9.Tag.ToString() == "O" ||
+                b3.Tag.ToString() == "O" && b5.Tag.ToString() == "O" && b7.Tag.ToString() == "O")
+            {
+                return "O";
+            }
+
+            return string.Empty;
+
+
+        }
+        public void handle_top_left(PaintEventArgs e)
+        {
+            if (checkX_threeInRow(button1,button2,button3,button4,button5,button6,button7,button8,button9) == "X")
+            {
+                top_left_image("X",e);
+            }
+
+            if (checkO_threeInRow(button1, button2, button3, button4, button5, button6, button7, button8, button9) == "O")
+            {
+                top_left_image("O", e);
+            }
         }
     }
 }

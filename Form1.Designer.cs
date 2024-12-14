@@ -96,7 +96,7 @@
             this.button4.BackColor = System.Drawing.Color.Black;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(865, 232);
+            this.button4.Location = new System.Drawing.Point(708, 232);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(60, 60);
             this.button4.TabIndex = 15;
@@ -122,7 +122,7 @@
             this.button6.BackColor = System.Drawing.Color.Black;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button6.Location = new System.Drawing.Point(708, 232);
+            this.button6.Location = new System.Drawing.Point(865, 232);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(60, 60);
             this.button6.TabIndex = 13;
@@ -135,7 +135,7 @@
             this.button7.BackColor = System.Drawing.Color.Black;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button7.Location = new System.Drawing.Point(865, 303);
+            this.button7.Location = new System.Drawing.Point(708, 303);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(60, 60);
             this.button7.TabIndex = 18;
@@ -161,7 +161,7 @@
             this.button9.BackColor = System.Drawing.Color.Black;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button9.Location = new System.Drawing.Point(708, 303);
+            this.button9.Location = new System.Drawing.Point(865, 303);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(60, 60);
             this.button9.TabIndex = 16;
