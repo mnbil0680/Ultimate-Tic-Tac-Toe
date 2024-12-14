@@ -1,14 +1,6 @@
 ﻿using problem8.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace problem8
@@ -27,11 +19,18 @@ namespace problem8
 
                 if (label1.Text == "Player X")
                 {
-                    btn.Image = Resources.X_letter_8;
+                    // change button image with certain ratio
+                    // change ratio of image
+                    Image img = Resources.X_letter_8;
+                    img = new Bitmap(img, new Size(60, 60));
+                    btn.Image = img;
+                    //btn.Image = Resources.X_letter_8;
                     btn.Tag = "X";
                     label1.Text = "Player O";
                     label1.Tag = "O";
                     counter--;
+
+
 
                     if (counter == 0)
                     {
@@ -55,7 +54,7 @@ namespace problem8
                                 c.BackColor = Color.Green;
                             }
                         }
-                        button5.BackColor = Color.Red;
+                       
 
 
 

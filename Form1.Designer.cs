@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,12 +44,21 @@
             this.label1.Tag = "X";
             this.label1.Text = "Player X";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(711, 161);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 60);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1504, 644);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.KeyPreview = true;
             this.Name = "Form1";
@@ -61,6 +71,7 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
