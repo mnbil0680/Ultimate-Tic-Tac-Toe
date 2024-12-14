@@ -16,75 +16,26 @@ namespace problem8
         {
             if (btn.Tag.ToString() == "?")
             {
-
                 if (label1.Text == "Player X")
                 {
-                    // change button image with certain ratio
-                    // change ratio of image
                     Image img = Resources.X_letter_8;
-                    img = new Bitmap(img, new Size(60, 60));
+                    img = new Bitmap(img,new Size(btn.Width-10,btn.Height-10) );
                     btn.Image = img;
-                    //btn.Image = Resources.X_letter_8;
                     btn.Tag = "X";
                     label1.Text = "Player O";
                     label1.Tag = "O";
-                    counter--;
-
-
-
-                    if (counter == 0)
-                    {
-                        // remove button image
-                        foreach (Control c in this.Controls)
-                        {
-                            if (c is Button)
-                            {
-                                Button b = (Button)c;
-                                b.Image = null;
-                                b.Tag = "?";
-                            }
-                        }
-                        // make button background color green
-
-                        foreach (Control c in this.Controls)
-                        {
-                            if (c is Button)
-                            {
-
-                                c.BackColor = Color.Green;
-                            }
-                        }
-                       
-
-
-
-
-                    }
-
+                    
 
                 }
                 else
                 {
-                    btn.Image = Resources.O_letter_8;
+                    Image img = Resources.O_letter_8;
+                    img = new Bitmap(img, new Size(btn.Width - 10, btn.Height - 10));
+                    btn.Image = img;
                     btn.Tag = "O";
                     label1.Text = "Player X";
                     label1.Tag = "X";
-                    counter--;
-                    if (counter == 0)
-                    {
-                        // remove button image
-                        foreach (Control c in this.Controls)
-                        {
-                            if (c is Button)
-                            {
-                                Button b = (Button)c;
-                                b.Image = null;
-                                b.Tag = "?";
-                            }
-                        }
-                    }
-
-
+                    
                 }
 
             }
