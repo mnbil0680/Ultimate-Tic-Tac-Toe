@@ -8,27 +8,36 @@ namespace problem8
 {
     public partial class Form1 : Form
     {
-        
+        char cell1 = ' ';
+        char cell2 = ' ';
+        char cell3 = ' ';
+        char cell4 = ' ';
+        char cell5 = ' ';
+        char cell6 = ' ';
+        char cell7 = ' ';
+        char cell8 = ' ';
+        char cell9 = ' ';
         public Form1()
         {
             InitializeComponent();
         }
-        
+
         public void Handle()
         {
             handle_top_left();
             handle_top_center();
             handle_top_right();
-           
+
             handle_middle_left();
             handle_middle_center();
             handle_middle_right();
-            
+
             handle_bottom_left();
             handle_bottom_center();
             handle_bottom_right();
-            
-            
+
+            handle_big_grid();
+
         }
         public void ImageChange(Button btn)
         {
@@ -143,7 +152,7 @@ namespace problem8
 
         public void middle_left_grid(object sender, PaintEventArgs e)
         {
-            Color white = Color.FromArgb(255, 255, 255, 255);
+            Color white = Color.FromArgb(100, 255, 255, 255);
             Pen whitePen = new Pen(white);
             whitePen.Width = 5;
             //whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -162,7 +171,7 @@ namespace problem8
 
         public void middle_center_grid(object sender, PaintEventArgs e)
         {
-            Color white = Color.FromArgb(255, 255, 255, 255);
+            Color white = Color.FromArgb(100, 255, 255, 255);
             Pen whitePen = new Pen(white);
             whitePen.Width = 5;
             //whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -180,7 +189,7 @@ namespace problem8
 
         public void middle_right_grid(object sender, PaintEventArgs e)
         {
-            Color white = Color.FromArgb(255, 255, 255, 255);
+            Color white = Color.FromArgb(100, 255, 255, 255);
             Pen whitePen = new Pen(white);
             whitePen.Width = 5;
             //whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -198,7 +207,7 @@ namespace problem8
 
         public void bottom_left_grid(object sender, PaintEventArgs e)
         {
-            Color white = Color.FromArgb(255, 255, 255, 255);
+            Color white = Color.FromArgb(100, 255, 255, 255);
             Pen whitePen = new Pen(white);
             whitePen.Width = 5;
             //whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -217,7 +226,7 @@ namespace problem8
 
         public void bottom_center_grid(object sender, PaintEventArgs e)
         {
-            Color white = Color.FromArgb(255, 255, 255, 255);
+            Color white = Color.FromArgb(100, 255, 255, 255);
             Pen whitePen = new Pen(white);
             whitePen.Width = 5;
             //whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -235,7 +244,7 @@ namespace problem8
 
         public void bottom_right_grid(object sender, PaintEventArgs e)
         {
-            Color white = Color.FromArgb(255, 255, 255, 255);
+            Color white = Color.FromArgb(100, 255, 255, 255);
             Pen whitePen = new Pen(white);
             whitePen.Width = 5;
             //whitePen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
@@ -349,6 +358,7 @@ namespace problem8
                 button1.Hide(); button2.Hide(); button3.Hide();
                 button4.Hide(); button5.Hide(); button6.Hide();
                 button7.Hide(); button8.Hide(); button9.Hide();
+                cell1 = 'X';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -365,7 +375,7 @@ namespace problem8
                 button1.Hide(); button2.Hide(); button3.Hide();
                 button4.Hide(); button5.Hide(); button6.Hide();
                 button7.Hide(); button8.Hide(); button9.Hide();
-
+                cell1 = 'O';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_O;
@@ -386,7 +396,7 @@ namespace problem8
                 button18.Hide(); button17.Hide(); button16.Hide();
                 button13.Hide(); button14.Hide(); button15.Hide();
                 button10.Hide(); button11.Hide(); button12.Hide();
-
+                cell2 = 'X';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_X;
@@ -402,7 +412,7 @@ namespace problem8
                 button18.Hide(); button17.Hide(); button16.Hide();
                 button13.Hide(); button14.Hide(); button15.Hide();
                 button10.Hide(); button11.Hide(); button12.Hide();
-                
+                cell2 = 'O';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -424,7 +434,7 @@ namespace problem8
                 button27.Hide(); button26.Hide(); button25.Hide();
                 button22.Hide(); button23.Hide(); button24.Hide();
                 button19.Hide(); button20.Hide(); button21.Hide();
-                
+                cell3 = 'X';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -441,7 +451,7 @@ namespace problem8
                 button27.Hide(); button26.Hide(); button25.Hide();
                 button22.Hide(); button23.Hide(); button24.Hide();
                 button19.Hide(); button20.Hide(); button21.Hide();
-
+                cell3 = 'O';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -464,7 +474,7 @@ namespace problem8
                button36.Hide(); button35.Hide(); button34.Hide();
                button31.Hide(); button32.Hide(); button33.Hide();
                button28.Hide(); button29.Hide(); button30.Hide();
-
+                cell4 = 'X';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -481,7 +491,7 @@ namespace problem8
                 button36.Hide(); button35.Hide(); button34.Hide();
                 button31.Hide(); button32.Hide(); button33.Hide();
                 button28.Hide(); button29.Hide(); button30.Hide();
-
+                cell4 = 'O';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -504,7 +514,7 @@ namespace problem8
                 button45.Hide(); button44.Hide(); button43.Hide();
                 button40.Hide(); button41.Hide(); button42.Hide();
                 button37.Hide(); button38.Hide(); button39.Hide();
-
+                cell5 = 'X';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_X;
@@ -521,7 +531,7 @@ namespace problem8
                 button45.Hide(); button44.Hide(); button43.Hide();
                 button40.Hide(); button41.Hide(); button42.Hide();
                 button37.Hide(); button38.Hide(); button39.Hide();
-
+                cell5 = 'O';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_O;
@@ -545,7 +555,7 @@ namespace problem8
                button54.Hide(); button53.Hide(); button52.Hide();
                button49.Hide(); button50.Hide(); button51.Hide();
                button46.Hide(); button47.Hide(); button48.Hide();
-
+                cell6 = 'X';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -562,7 +572,7 @@ namespace problem8
                 button54.Hide(); button53.Hide(); button52.Hide();
                 button49.Hide(); button50.Hide(); button51.Hide();
                 button46.Hide(); button47.Hide(); button48.Hide();
-
+                cell6 = 'O';
 
                 // picture box
                 PictureBox pb = new PictureBox();
@@ -584,7 +594,7 @@ namespace problem8
                 button63.Hide(); button62.Hide(); button61.Hide();
                 button58.Hide(); button59.Hide(); button60.Hide();
                 button55.Hide(); button56.Hide(); button57.Hide();
-
+                cell7 = 'X';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_X;
@@ -601,7 +611,7 @@ namespace problem8
                 button63.Hide(); button62.Hide(); button61.Hide();
                 button58.Hide(); button59.Hide(); button60.Hide();
                 button55.Hide(); button56.Hide(); button57.Hide();
-
+                cell7 = 'O';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_O;
@@ -622,7 +632,7 @@ namespace problem8
                 button72.Hide(); button71.Hide(); button70.Hide();
                 button67.Hide(); button68.Hide(); button69.Hide();
                 button64.Hide(); button65.Hide(); button66.Hide();
-
+                cell8 = 'X';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_X;
@@ -639,7 +649,7 @@ namespace problem8
                 button72.Hide(); button71.Hide(); button70.Hide();
                 button67.Hide(); button68.Hide(); button69.Hide();
                 button64.Hide(); button65.Hide(); button66.Hide();
-
+                cell8 = 'O';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_O;
@@ -659,7 +669,7 @@ namespace problem8
                 button81.Hide(); button80.Hide(); button79.Hide();
                 button76.Hide(); button77.Hide(); button78.Hide();
                 button73.Hide(); button74.Hide(); button75.Hide();
-
+                cell9 = 'X';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_X;
@@ -675,7 +685,7 @@ namespace problem8
                 button81.Hide(); button80.Hide(); button79.Hide();
                 button76.Hide(); button77.Hide(); button78.Hide();
                 button73.Hide(); button74.Hide(); button75.Hide();
-
+                cell9 = 'O';
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_O;
@@ -688,10 +698,85 @@ namespace problem8
             }
         }
 
+        public void handle_big_grid()
+        {
+            // check X
+            // check horizontals
+            if (cell1 == 'X' && cell2 == 'X' && cell3 == 'X' ||
+                cell4 == 'X' && cell5 == 'X' && cell6 == 'X' ||
+                cell7 == 'X' && cell8 == 'X' && cell9 == 'X')
+            {
+                MessageBox.Show("Player X wins", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                game_over("Player X");
+            }
+            // check verticals
+            if (cell1 == 'X' && cell4 == 'X' && cell7 == 'X' ||
+                cell2 == 'X' && cell5 == 'X' && cell8 == 'X' ||
+                cell3 == 'X' && cell6 == 'X' && cell9 == 'X')
+            {
+                MessageBox.Show("Player X wins", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                game_over("Player X");
+            }
+            // check diagonals
+            if (cell1 == 'X' && cell5 == 'X' && cell9 == 'X' ||
+                cell3 == 'X' && cell5 == 'X' && cell7 == 'X')
+            {
+                MessageBox.Show("Player X wins", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                game_over("Player X");
+            }
 
+            // check O
+            // check horizontals
+            if (cell1 == 'O' && cell2 == 'O' && cell3 == 'O' ||
+                cell4 == 'O' && cell5 == 'O' && cell6 == 'O' ||
+                cell7 == 'O' && cell8 == 'O' && cell9 == 'O')
+            {
+                MessageBox.Show("Player O wins", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                game_over("Player O");
+            }
+            // check verticals
+            if (cell1 == 'O' && cell4 == 'O' && cell7 == 'O' ||
+                cell2 == 'O' && cell5 == 'O' && cell8 == 'O' ||
+                cell3 == 'O' && cell6 == 'O' && cell9 == 'O')
+            {
+                MessageBox.Show("Player O wins", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                game_over("Player O");
+            }
+            // check diagonals
+            if (cell1 == 'O' && cell5 == 'O' && cell9 == 'O' ||
+                cell3 == 'O' && cell5 == 'O' && cell7 == 'O')
+            {
+                MessageBox.Show("Player O wins", "Winner", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                game_over("Player O");
+            }
+        }
+        
+        public void game_over(string player)
+        {
+            // check if all buttons are disabled
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button && c != button82)
+                {
+                    Button b = (Button)c;
+                    b.Hide();
+                }
+            }
+            // show the winner
+            label5.Text = player;
+            label1.Hide();
+            
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button82_Click(object sender, EventArgs e)
+        {
+            // reset the game
+            Application.Restart();
         }
     }
 }
