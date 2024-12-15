@@ -1,6 +1,6 @@
 ﻿namespace problem8
 {
-    partial class Form3
+    partial class RandomPlayer
     {
         /// <summary>
         /// Required designer variable.

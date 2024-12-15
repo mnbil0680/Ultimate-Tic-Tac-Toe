@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace problem8
 {
-    public partial class Form3 : Form
+    public partial class RandomPlayer : Form
     {
         char cell1 = ' ';
         char cell2 = ' ';
@@ -22,7 +22,7 @@ namespace problem8
         char cell7 = ' ';
         char cell8 = ' ';
         char cell9 = ' ';
-        public Form3()
+        public RandomPlayer()
         {
             InitializeComponent();
         }
@@ -605,7 +605,7 @@ namespace problem8
         {
             //Application.Restart();
             //restart Form3
-            Form3 form3 = new Form3();
+            RandomPlayer form3 = new RandomPlayer();
             form3.Show();
             this.Hide();
 

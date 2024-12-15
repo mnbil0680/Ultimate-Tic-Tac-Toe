@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace problem8
 {
-    public partial class Form2 : Form
+    public partial class MainMenu : Form
     {
-        public Form2()
+        public MainMenu()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace problem8
         private void button2_Click(object sender, EventArgs e)
         {
             // show the form3
-            Form3 f3 = new Form3();
+            RandomPlayer f3 = new RandomPlayer();
             f3.Show();
             this.Hide();
 

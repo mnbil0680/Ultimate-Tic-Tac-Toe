@@ -1,6 +1,6 @@
 ﻿namespace problem8
 {
-    partial class Form2
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -43,9 +43,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(396, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(819, 185);
+            this.label1.Size = new System.Drawing.Size(819, 128);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to Ultimate Tic-Tac-Toe\r\n==========================\r\n\r\n";
+            this.label1.Text = "Welcome to Ultimate Tic-Tac-Toe\r\n==========================";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.UseCompatibleTextRendering = true;
             // 
@@ -91,7 +91,7 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form2
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "MainMenu";
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
