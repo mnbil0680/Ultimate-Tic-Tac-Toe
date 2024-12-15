@@ -19,9 +19,11 @@ namespace problem8
             handle_top_left();
             handle_top_center();
             handle_top_right();
+           
             handle_middle_left();
             handle_middle_center();
             handle_middle_right();
+            
             handle_bottom_left();
             handle_bottom_center();
             handle_bottom_right();
@@ -496,7 +498,7 @@ namespace problem8
 
         public void handle_middle_center()
         {
-
+            // check horizontals
             if (checkX_threeInRow(button45, button44, button43, button40, button41, button42, button37, button38, button39) == "X")
             {
                 button45.Hide(); button44.Hide(); button43.Hide();
@@ -514,7 +516,7 @@ namespace problem8
 
             }
 
-            if (checkX_threeInRow(button45, button44, button43, button40, button41, button42, button37, button38, button39) == "O")
+            if (checkO_threeInRow(button45, button44, button43, button40, button41, button42, button37, button38, button39) == "O")
             {
                 button45.Hide(); button44.Hide(); button43.Hide();
                 button40.Hide(); button41.Hide(); button42.Hide();
@@ -528,47 +530,16 @@ namespace problem8
                 pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 pb.Show();
                 this.Controls.Add(pb);
+
             }
+
+
 
         }
 
         public void handle_middle_right()
         {
-            /*
-            if (checkX_threeInRow(button54, button53, button52, button49, button50, button51, button46, button47, button48) == "X")
-            {
-                button54.Hide(); button53.Hide(); button52.Hide();
-                button49.Hide(); button50.Hide(); button51.Hide();
-                button46.Hide(); button47.Hide(); button48.Hide();
-
-                // picture box
-                PictureBox pb = new PictureBox();
-                pb.Image = Resources.Big_X;
-                pb.Location = new Point(1050, 315);
-                pb.Size = new Size(200, 145);
-                pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                pb.Show();
-                this.Controls.Add(pb);
-
-            }
-
-            if (checkX_threeInRow(button54, button53, button52, button49, button50, button51, button46, button47, button48) == "O")
-            {
-                button54.Hide(); button53.Hide(); button52.Hide();
-                button49.Hide(); button50.Hide(); button51.Hide();
-                button46.Hide(); button47.Hide(); button48.Hide();
-
-                // picture box
-                PictureBox pb = new PictureBox();
-                pb.Image = Resources.Big_O;
-                pb.Location = new Point(1050, 315);
-                pb.Size = new Size(200, 145);
-                pb.SizeMode = PictureBoxSizeMode.StretchImage;
-                pb.Show();
-                this.Controls.Add(pb);
-
-            }
-            */
+           
             if (checkX_threeInRow(button54, button53, button52, button49, button50, button51, button46, button47, button48) == "X")
             {
                button54.Hide(); button53.Hide(); button52.Hide();
@@ -579,7 +550,7 @@ namespace problem8
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_X;
-                pb.Location = new Point(600, 315);
+                pb.Location = new Point(1050, 315);
                 pb.Size = new Size(200, 145);
                 pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 pb.Show();
@@ -596,7 +567,7 @@ namespace problem8
                 // picture box
                 PictureBox pb = new PictureBox();
                 pb.Image = Resources.Big_O;
-                pb.Location = new Point(600, 315);
+                pb.Location = new Point(1050, 315);
                 pb.Size = new Size(200, 145);
                 pb.SizeMode = PictureBoxSizeMode.StretchImage;
                 pb.Show();
@@ -625,7 +596,7 @@ namespace problem8
 
             }
             
-            if (checkX_threeInRow(button63, button62, button61, button58, button59, button60, button55, button56, button57) == "O")
+            if (checkO_threeInRow(button63, button62, button61, button58, button59, button60, button55, button56, button57) == "O")
             {
                 button63.Hide(); button62.Hide(); button61.Hide();
                 button58.Hide(); button59.Hide(); button60.Hide();
@@ -663,7 +634,7 @@ namespace problem8
 
             }
 
-            if (checkX_threeInRow(button72, button71, button70, button67, button68, button69, button64, button65, button66) == "O")
+            if (checkO_threeInRow(button72, button71, button70, button67, button68, button69, button64, button65, button66) == "O")
             {
                 button72.Hide(); button71.Hide(); button70.Hide();
                 button67.Hide(); button68.Hide(); button69.Hide();
@@ -699,7 +670,7 @@ namespace problem8
                 this.Controls.Add(pb);
 
             }
-            if (checkX_threeInRow(button81, button80, button79, button76, button77, button78, button73, button74, button75) == "O")
+            if (checkO_threeInRow(button81, button80, button79, button76, button77, button78, button73, button74, button75) == "O")
             {
                 button81.Hide(); button80.Hide(); button79.Hide();
                 button76.Hide(); button77.Hide(); button78.Hide();
