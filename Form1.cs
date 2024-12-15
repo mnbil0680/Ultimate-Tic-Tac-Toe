@@ -79,6 +79,7 @@ namespace problem8
         {
             ImageChange((Button)sender);
         }
+        
         public void mainGrid(object sender, PaintEventArgs e)
         {
             Color white = Color.FromArgb(255, 255, 0, 255);
@@ -260,9 +261,6 @@ namespace problem8
             e.Graphics.DrawLine(whitePen, 1050, 600, 1250, 600);
         }
 
-        
-
-
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //draw grid
@@ -285,6 +283,9 @@ namespace problem8
             
 
         }
+        
+
+
 
         public string checkX_threeInRow(Button b1, Button b2, Button b3, Button b4, Button b5, Button b6, Button b7, Button b8, Button b9)
         {
@@ -351,8 +352,11 @@ namespace problem8
 
 
         }
+        
+        
         public void handle_top_left()
         {
+
             if (checkX_threeInRow(button1,button2,button3,button4,button5,button6,button7,button8,button9) == "X")
             {
                 button1.Hide(); button2.Hide(); button3.Hide();
@@ -386,6 +390,8 @@ namespace problem8
                 this.Controls.Add(pb);
 
             }
+        
+        
         }
 
         public void handle_top_center()
@@ -775,8 +781,11 @@ namespace problem8
 
         private void button82_Click(object sender, EventArgs e)
         {
-            // reset the game
-            Application.Restart();
+            
+            //restart Form1
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
